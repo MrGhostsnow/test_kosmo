@@ -6,7 +6,7 @@ export const ContainerNavBar = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 0.5px solid #000000;
+    border-bottom: 0.5px solid #00000066;
 `;
 
 export const ContentNavBar = styled.div`

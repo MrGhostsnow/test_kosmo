@@ -84,7 +84,7 @@ export default function Footer() {
           </SocialMedia>
         </MainColumn>
       </ContentFooter>
-      <CopyRight>Copyright 2022 Exclusive. All Rights Reserved</CopyRight>
+      {/* <CopyRight>Copyright 2022 Exclusive. All Rights Reserved</CopyRight> */}
     </ContainerFooter>
   );
 }
