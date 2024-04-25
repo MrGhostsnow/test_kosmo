@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import Image from "next/image";
 
-const LogInForm = () => {
+const SignUpForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,10 +16,19 @@ const LogInForm = () => {
   return (
     <FormContainer>
       <SectionTitle>
-        <Title>Log in to Exclusive</Title>
+        <Title>Create an account</Title>
         <Subtitle>Enter your details below</Subtitle>
       </SectionTitle>
       <Form onSubmit={handleSubmit}>
+        <Input
+          type="text"
+          value={name}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setName(e.target.value)
+          }
+          placeholder="Name"
+        />
+
         <Input
           type="text"
           value={email}
@@ -38,8 +47,21 @@ const LogInForm = () => {
           placeholder="Password"
         />
         <ContainerButtons>
-          <Button type="submit">Log In</Button>
-          <GoogleSignUpButton>Forget Password?</GoogleSignUpButton>
+          <Button type="submit">Create Account</Button>
+          <GoogleSignUpButton>
+            {
+              <Image
+                src="/assets/icon-google.png"
+                alt="google"
+                width={24}
+                height={24}
+              />
+            }{" "}
+            Sign up with Google
+          </GoogleSignUpButton>
+          <AlreadyHaveAccount>
+            Already have an account? <LogInLink>Log in</LogInLink>
+          </AlreadyHaveAccount>
         </ContainerButtons>
       </Form>
     </FormContainer>
@@ -98,39 +120,57 @@ const Input = styled.input`
 
 const ContainerButtons = styled.div`
   display: flex;
-  align-items: center;
-  gap: 87px;
+  flex-direction: column;
+  gap: 16px;
 `;
 
 const Button = styled.button`
   background-color: #db4444;
   color: #fff;
-  width: 143px;
+  width: 371px;
   height: 56px;
   border: none;
   border-radius: 4px;
-  padding: 16px 48px;
+  padding: 16px 122px;
   cursor: pointer;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   color: #fafafa;
-  display: flex;
-  align-items: center;
 `;
 
 const GoogleSignUpButton = styled.button`
   background-color: #fff;
-  color: #db4444;
-  width: 141px;
-  height: 24px;
-  border: none;
+  color: #000000;
+  width: 371px;
+  height: 56px;
+  border: 1px solid #00000066;
+  border-radius: 4px;
+  padding: 16px 86px;
   cursor: pointer;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   display: flex;
   align-items: center;
+  gap: 14px;
 `;
 
-export default LogInForm;
+const AlreadyHaveAccount = styled.p`
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000000;
+  align-self: center;
+`;
+
+const LogInLink = styled.a`
+  text-decoration: underline;
+  color: #000000;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+`;
+
+export default SignUpForm;
