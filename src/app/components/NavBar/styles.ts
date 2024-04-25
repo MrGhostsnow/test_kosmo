@@ -6,14 +6,14 @@ export const ContainerNavBar = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 0.5px solid #000000
+    border-bottom: 0.5px solid #000000;
 `;
 
 export const ContentNavBar = styled.div`
     height: 24px;
-    width: 887px;
+    width: 1170px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 `;
 
 export const Logo = styled.p`
@@ -48,6 +48,6 @@ export const InputSearch = styled.input`
 
 export const IconSearch = styled.span`
     position: absolute;
-    right: 13rem;
-    top: 2.6rem;
+    right: 9rem;
+    top: 2.65rem;
 `;
