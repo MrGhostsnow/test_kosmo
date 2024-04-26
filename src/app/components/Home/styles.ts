@@ -28,7 +28,6 @@ export const Option = styled.span`
     cursor: pointer;
     font-size: 16px;
     font-weight: 400;
-    
     color: #000000;
 `;
 

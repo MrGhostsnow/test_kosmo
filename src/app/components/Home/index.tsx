@@ -9,6 +9,8 @@ import {
 import dropdown from "../../../../public/assets/dropdown.png";
 import caroselOferts from "../../../../public/assets/carosel-oferts.png";
 import Image from "next/image";
+import CaroselSales from "./CaroselSales";
+import { carouseFlashData } from "@/app/data/carouselFlashData";
 
 export default function HomePage() {
   return (
@@ -40,6 +42,7 @@ export default function HomePage() {
           />
         </SectionCaroselOferts>
       </ContainerHeaderHome>
+      <CaroselSales {...carouseFlashData} />
     </ContainerHome>
   );
 }
