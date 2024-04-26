@@ -15,6 +15,7 @@ import { carouselFlashData } from "@/app/data/carouselFlashData";
 import { carouselBestSalesData } from "@/app/data/carouselBestSalesData";
 import { carouselExploreData } from "@/app/data/carouselExploreData";
 import { carouselCategoriesData } from "@/app/data/carouselCategories";
+import NewArrival from "./NewArrival";
 
 export default function HomePage() {
   return (
@@ -51,6 +52,7 @@ export default function HomePage() {
         isCarousel={false}
         isOverflow={true}
         isWrap={false}
+        isPromo={true}
       />
       <CarouselCategories {...carouselCategoriesData} />
       <CaroselSales
@@ -64,6 +66,8 @@ export default function HomePage() {
         isOverflow={false}
         isWrap={true}
       />
+
+      <NewArrival />
     </ContainerHome>
   );
 }

@@ -45,6 +45,7 @@ interface CaroselSalesProps {
   isCarousel?: boolean;
   isOverflow?: boolean;
   isWrap?: boolean;
+  isPromo?: boolean;
 }
 
 const CaroselSales: React.FC<CaroselSalesProps> = (props) => {
@@ -59,7 +60,7 @@ const CaroselSales: React.FC<CaroselSalesProps> = (props) => {
       <SectionHeaderSales>
         <SalesType>
           <TitleType>{props.salesType}</TitleType>
-          <Timer initialTime={1800} />
+          {props.isPromo ? <Timer initialTime={1800} /> : null}
         </SalesType>
         {props.isCarousel ? (
           <ButtonViewAll style={{ width: "159px" }}>View All</ButtonViewAll>
