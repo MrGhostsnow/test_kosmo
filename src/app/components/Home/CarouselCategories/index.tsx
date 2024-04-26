@@ -57,9 +57,8 @@ const CarouselCategories: React.FC<CarouselCategoriesProps> = (props) => {
         {props.sections.map((section, index) => (
           <SectionCaroselCategories key={index}>
             {section.categories.map((category, index) => (
-              <ContainerProduct>
+              <ContainerProduct key={index}>
                 <Categories
-                  key={index}
                   style={{
                     backgroundColor: category.isSelected ? "#DB4444" : "ffffff",
                     border: category.isSelected

@@ -81,8 +81,8 @@ const CaroselSales: React.FC<CaroselSalesProps> = (props) => {
             }}
           >
             {section.sales.map((product, index) => (
-              <ContainerProduct>
-                <Sales key={index}>
+              <ContainerProduct key={index}>
+                <Sales>
                   <Image
                     src={product.imageURL}
                     alt=""
