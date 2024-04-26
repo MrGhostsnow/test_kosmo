@@ -28,7 +28,7 @@ export const LinksNavBar = styled.div`
     gap: 48px;
 `;
 
-export const Link = styled.a`
+export const Links = styled.a`
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;

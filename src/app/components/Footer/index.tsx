@@ -24,6 +24,7 @@ import iconTwitter from "../../../../public/assets/icon-twitter.png";
 import iconInstagram from "../../../../public/assets/icon-instagram.png";
 import iconLinkedin from "../../../../public/assets/icon-linkedin.png";
 import iconSend from "../../../../public/assets/icon-send.png";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -47,7 +48,9 @@ export default function Footer() {
         <MainColumn>
           <TextColumn>Acount</TextColumn>
           <InfoColumn>My Account</InfoColumn>
-          <InfoColumn>Login / Register</InfoColumn>
+          <Link href="/signup">
+            <InfoColumn>Login / Register</InfoColumn>
+          </Link>
           <InfoColumn>Cart</InfoColumn>
           <InfoColumn>Wishlist</InfoColumn>
           <InfoColumn>Shop</InfoColumn>

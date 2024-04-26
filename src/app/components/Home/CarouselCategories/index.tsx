@@ -17,25 +17,7 @@ import {
   ProductName,
 } from "./styles";
 import Image from "next/image";
-
-interface Category {
-  imageURL: string;
-  categoryName: string;
-  isSelected?: boolean;
-}
-
-interface SectionCarouselCategoriesProps {
-  categories: Category[];
-}
-
-interface CarouselCategoriesProps {
-  title: string;
-  salesType: string;
-  sections: SectionCarouselCategoriesProps[];
-  isCarousel?: boolean;
-  isOverflow?: boolean;
-  isWrap?: boolean;
-}
+import { CarouselCategoriesProps } from "../../../interfaces/CategoriesProps";
 
 const CarouselCategories: React.FC<CarouselCategoriesProps> = (props) => {
   return (

@@ -2,6 +2,7 @@
 import styled from "styled-components";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const SignUpForm = () => {
   const [name, setName] = useState("");
@@ -10,7 +11,6 @@ const SignUpForm = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission logic here
   };
 
   return (
@@ -60,7 +60,10 @@ const SignUpForm = () => {
             Sign up with Google
           </GoogleSignUpButton>
           <AlreadyHaveAccount>
-            Already have an account? <LogInLink>Log in</LogInLink>
+            Already have an account?{" "}
+            <Link href="/login">
+              <LogInLink>Log in</LogInLink>
+            </Link>
           </AlreadyHaveAccount>
         </ContainerButtons>
       </Form>

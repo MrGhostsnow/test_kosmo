@@ -1,13 +1,10 @@
 import styled from "styled-components";
 
-export const ContainerHome = styled.div`
+export const ContainerLogIn = styled.div`
     display: flex;
-    flex-direction: column;
+    width: 100%;
     align-items: center;
     justify-content: center;
+    gap: 129px;
+    height: 781px;
 `;
-
-
-
-
-

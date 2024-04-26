@@ -4,12 +4,13 @@ import {
   ContentNavBar,
   Logo,
   LinksNavBar,
-  Link,
+  Links,
   InputSearch,
   IconSearch,
 } from "./styles";
 import searchLogo from "../../../../public/assets/search-icon.png";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function NavBar() {
   return (
@@ -17,10 +18,14 @@ export default function NavBar() {
       <ContentNavBar>
         <Logo>Exclusive</Logo>
         <LinksNavBar>
-          <Link>Home</Link>
-          <Link>Contact</Link>
-          <Link>About</Link>
-          <Link>Sign Up</Link>
+          <Link href="/">
+            <Links>Home</Links>
+          </Link>
+          <Links>Contact</Links>
+          <Links>About</Links>
+          <Link href="/signup">
+            <Links>Sign Up</Links>
+          </Link>
         </LinksNavBar>
       </ContentNavBar>
       <InputSearch placeholder="What are you looking for?" />

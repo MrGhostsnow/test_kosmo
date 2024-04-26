@@ -1,5 +1,3 @@
-// carouselData.ts
-
 export interface Product {
     imageURL: string;
     productName: string;

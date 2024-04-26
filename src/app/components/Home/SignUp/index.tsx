@@ -1,12 +1,12 @@
 "use client";
 import Image from "next/image";
-import LogInForm from "./Form/FormLogIn";
+import Footer from "../../Footer";
+import NavBar from "../../NavBar";
+import TopHeader from "../../TopHeader";
+import SignUpForm from "./Form/FormSignUp";
 import { ContainerLogIn } from "./styles";
-import Footer from "../Footer";
-import NavBar from "../NavBar";
-import TopHeader from "../TopHeader";
 
-export default function LogIn() {
+export default function CreateAccount() {
   return (
     <>
       <TopHeader />
@@ -18,7 +18,7 @@ export default function LogIn() {
           height={706}
           alt="logo"
         />
-        <LogInForm />
+        <SignUpForm />
       </ContainerLogIn>
       <Footer />
     </>

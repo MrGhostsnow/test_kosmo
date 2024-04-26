@@ -24,30 +24,7 @@ import {
 } from "./styles";
 import Image from "next/image";
 import Timer from "./Timer";
-
-interface Product {
-  imageURL: string;
-  productName: string;
-  price: string;
-  pastPrice?: string;
-  width: number;
-  height: number;
-}
-
-interface SectionCaroselSalesProps {
-  sales: Product[];
-}
-
-interface CaroselSalesProps {
-  title: string;
-  salesType: string;
-  sections: SectionCaroselSalesProps[];
-  isCarousel?: boolean;
-  isOverflow?: boolean;
-  isWrap?: boolean;
-  isPromo?: boolean;
-  isBorder?: boolean;
-}
+import { CaroselSalesProps } from "../../../interfaces/SalesProps";
 
 const CaroselSales: React.FC<CaroselSalesProps> = (props) => {
   return (
