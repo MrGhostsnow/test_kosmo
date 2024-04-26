@@ -25,14 +25,11 @@ import {
 import Image from "next/image";
 import Timer from "./Timer";
 
-import arrowLeft from "../../../../public/assets/icon_arrow-left.png";
-import arrowRight from "../../../../public/assets/icon_arrow-right.png";
-
 interface Product {
   imageURL: string;
   productName: string;
   price: string;
-  pastPrice: string;
+  pastPrice?: string;
   width: number;
   height: number;
 }
@@ -45,11 +42,16 @@ interface CaroselSalesProps {
   title: string;
   salesType: string;
   sections: SectionCaroselSalesProps[];
+  isCarousel?: boolean;
+  isOverflow?: boolean;
+  isWrap?: boolean;
 }
 
 const CaroselSales: React.FC<CaroselSalesProps> = (props) => {
   return (
-    <ContainerCaroselSales>
+    <ContainerCaroselSales
+      style={{ height: props.isWrap ? "1016px" : "693px" }}
+    >
       <SectionTag>
         <SpanTag></SpanTag>
         <TitleTag>{props.title}</TitleTag>
@@ -59,28 +61,43 @@ const CaroselSales: React.FC<CaroselSalesProps> = (props) => {
           <TitleType>{props.salesType}</TitleType>
           <Timer initialTime={1800} />
         </SalesType>
-        <SectionButtonCarosel>
-          <ButtonCarosel>
-            <Image
-              src="/assets/icons-arrow-left.png"
-              alt="arrow left"
-              width={24}
-              height={24}
-            />
-          </ButtonCarosel>
-          <ButtonCarosel>
-            <Image
-              src="/assets/icons-arrow-right.png"
-              alt=""
-              width={24}
-              height={24}
-            />
-          </ButtonCarosel>
-        </SectionButtonCarosel>
+        {props.isCarousel ? (
+          <ButtonViewAll style={{ width: "159px" }}>View All</ButtonViewAll>
+        ) : (
+          <SectionButtonCarosel>
+            <ButtonCarosel>
+              <Image
+                src="/assets/icons-arrow-left.png"
+                alt="arrow left"
+                width={24}
+                height={24}
+              />
+            </ButtonCarosel>
+            <ButtonCarosel>
+              <Image
+                src="/assets/icons-arrow-right.png"
+                alt=""
+                width={24}
+                height={24}
+              />
+            </ButtonCarosel>
+          </SectionButtonCarosel>
+        )}
       </SectionHeaderSales>
-      <Carosel>
+      <Carosel
+        style={{
+          overflowX: props.isOverflow ? "scroll" : "hidden",
+        }}
+      >
         {props.sections.map((section, index) => (
-          <SectionCaroselSales key={index}>
+          <SectionCaroselSales
+            key={index}
+            style={{
+              justifyContent: props.isOverflow ? "flex-start" : "center",
+              flexWrap: props.isWrap ? "wrap" : "nowrap",
+              height: props.isWrap ? "732px" : "350px",
+            }}
+          >
             {section.sales.map((product, index) => (
               <ContainerProduct>
                 <Sales key={index}>
@@ -113,7 +130,9 @@ const CaroselSales: React.FC<CaroselSalesProps> = (props) => {
           </SectionCaroselSales>
         ))}
       </Carosel>
-      <ButtonViewAll>View All Products</ButtonViewAll>
+      {props.isCarousel ? null : (
+        <ButtonViewAll>View All Products</ButtonViewAll>
+      )}
     </ContainerCaroselSales>
   );
 };

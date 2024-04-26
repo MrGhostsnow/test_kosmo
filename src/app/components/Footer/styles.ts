@@ -7,7 +7,6 @@ export const ContainerFooter = styled.footer`
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
 `;
 
 export const ContentFooter = styled.div`

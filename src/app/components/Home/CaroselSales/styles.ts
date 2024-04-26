@@ -4,7 +4,6 @@ export const ContainerCaroselSales = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 693px;
     border-bottom: 1px solid #00000066;
 `;
 
@@ -77,11 +76,9 @@ export const Carosel = styled.div`
 
 export const SectionCaroselSales = styled.div`
     display: flex;
-    overflow-x: scroll;
     width: 100%;
     height: 350px;
     align-items: center;
-    justify-content: start;
     gap: 30px;
 `;
 
@@ -100,14 +97,16 @@ export const Sales = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 `;
 
 export const SectionInfo = styled.div`
-    width: 201px;
+    width: 231px;
     height: 84px;
     display: flex;
     flex-direction: column;
     gap: 8px;
+    cursor: pointer;
 `;
 
 export const ProductName = styled.p`
@@ -148,6 +147,6 @@ export const ButtonViewAll = styled.button`
     border-radius: 4px;
     padding: 16px 48px;
     cursor: pointer;
-    align-self: center;
+    align-self: center
 `;
 

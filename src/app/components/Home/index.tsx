@@ -10,7 +10,11 @@ import dropdown from "../../../../public/assets/dropdown.png";
 import caroselOferts from "../../../../public/assets/carosel-oferts.png";
 import Image from "next/image";
 import CaroselSales from "./CaroselSales";
-import { carouseFlashData } from "@/app/data/carouselFlashData";
+import CarouselCategories from "./CarouselCategories";
+import { carouselFlashData } from "@/app/data/carouselFlashData";
+import { carouselBestSalesData } from "@/app/data/carouselBestSalesData";
+import { carouselExploreData } from "@/app/data/carouselExploreData";
+import { carouselCategoriesData } from "@/app/data/carouselCategories";
 
 export default function HomePage() {
   return (
@@ -42,7 +46,24 @@ export default function HomePage() {
           />
         </SectionCaroselOferts>
       </ContainerHeaderHome>
-      <CaroselSales {...carouseFlashData} />
+      <CaroselSales
+        {...carouselFlashData}
+        isCarousel={false}
+        isOverflow={true}
+        isWrap={false}
+      />
+      <CarouselCategories {...carouselCategoriesData} />
+      <CaroselSales
+        {...carouselBestSalesData}
+        isCarousel={true}
+        isOverflow={false}
+      />
+      <CaroselSales
+        {...carouselExploreData}
+        isCarousel={false}
+        isOverflow={false}
+        isWrap={true}
+      />
     </ContainerHome>
   );
 }
