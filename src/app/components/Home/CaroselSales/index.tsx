@@ -46,12 +46,16 @@ interface CaroselSalesProps {
   isOverflow?: boolean;
   isWrap?: boolean;
   isPromo?: boolean;
+  isBorder?: boolean;
 }
 
 const CaroselSales: React.FC<CaroselSalesProps> = (props) => {
   return (
     <ContainerCaroselSales
-      style={{ height: props.isWrap ? "1116px" : "893px" }}
+      style={{
+        height: props.isWrap ? "1116px" : "893px",
+        borderBottom: props.isBorder ? "1px solid #00000066" : "none",
+      }}
     >
       <SectionTag>
         <SpanTag></SpanTag>
@@ -107,6 +111,31 @@ const CaroselSales: React.FC<CaroselSalesProps> = (props) => {
                     alt=""
                     width={product.width}
                     height={product.height}
+                    style={{ cursor: "pointer", position: "absolute" }}
+                  />
+                  <Image
+                    src="/assets/icon-heart.png"
+                    alt=""
+                    width={34}
+                    height={34}
+                    style={{
+                      cursor: "pointer",
+                      position: "relative",
+                      top: -80,
+                      right: -125,
+                    }}
+                  />
+                  <Image
+                    src="/assets/icon-eye.png"
+                    alt=""
+                    width={34}
+                    height={34}
+                    style={{
+                      cursor: "pointer",
+                      position: "relative",
+                      top: -40,
+                      right: -90,
+                    }}
                   />
                 </Sales>
                 <SectionInfo>
