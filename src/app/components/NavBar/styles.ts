@@ -49,5 +49,5 @@ export const InputSearch = styled.input`
 export const IconSearch = styled.span`
     position: absolute;
     right: 9rem;
-    top: 2.65rem;
+    top: 5.6rem;
 `;
