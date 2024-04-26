@@ -5,7 +5,8 @@ export const ContainerNewArrival = styled.div`
     flex-direction: column;
     justify-content: center;
     border-bottom: 1px solid #00000066;
-    height: 768px;
+    height: 968px;
+    padding: 16px 0;
 `;
 
 export const SectionTag = styled.div`

@@ -51,7 +51,7 @@ interface CaroselSalesProps {
 const CaroselSales: React.FC<CaroselSalesProps> = (props) => {
   return (
     <ContainerCaroselSales
-      style={{ height: props.isWrap ? "1016px" : "693px" }}
+      style={{ height: props.isWrap ? "1116px" : "893px" }}
     >
       <SectionTag>
         <SpanTag></SpanTag>
@@ -87,7 +87,7 @@ const CaroselSales: React.FC<CaroselSalesProps> = (props) => {
       </SectionHeaderSales>
       <Carosel
         style={{
-          overflowX: props.isOverflow ? "scroll" : "hidden",
+          overflowX: props.isOverflow ? "hidden" : "hidden",
         }}
       >
         {props.sections.map((section, index) => (
