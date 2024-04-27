@@ -1,5 +1,5 @@
-import HomePage from "./components/Home";
+import CreateAccount from "@/app/components/Home/SignUp";
 
-export default function Home() {
-  return <HomePage />;
+export default function SignUp() {
+  return <CreateAccount />;
 }

@@ -167,7 +167,7 @@ const AlreadyHaveAccount = styled.p`
   align-self: center;
 `;
 
-const LogInLink = styled.a`
+const LogInLink = styled.span`
   text-decoration: underline;
   color: #000000;
   cursor: pointer;
