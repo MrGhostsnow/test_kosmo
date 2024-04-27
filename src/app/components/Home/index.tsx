@@ -1,3 +1,4 @@
+"use client";
 import { ContainerHome } from "./styles";
 import CaroselSales from "./CaroselSales";
 import CarouselCategories from "./CarouselCategories";
