@@ -18,13 +18,13 @@ export default function NavBar() {
       <ContentNavBar>
         <Logo>Exclusive</Logo>
         <LinksNavBar>
-          <Link href="/home">
+          <Link href="/">
             <Links>Home</Links>
           </Link>
           <Links>Contact</Links>
           <Links>About</Links>
           <Link
-            href="/
+            href="/signup
           "
           >
             <Links>Sign Up</Links>

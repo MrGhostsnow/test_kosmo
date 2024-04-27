@@ -48,7 +48,7 @@ export default function Footer() {
         <MainColumn>
           <TextColumn>Acount</TextColumn>
           <InfoColumn>My Account</InfoColumn>
-          <Link href="/">
+          <Link href="/signup">
             <InfoColumn>Login / Register</InfoColumn>
           </Link>
           <InfoColumn>Cart</InfoColumn>
